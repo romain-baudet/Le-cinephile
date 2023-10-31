@@ -1,0 +1,17 @@
+<section>
+    <div class="homeAdmin">
+        <h2>Reservation d'une séance</h2>
+        <form class="formDetailsSession" method="post" action="#">
+            <label for="sessionSelect">Quel séance souhaitez-vous réserver ? </label>
+            <select name="day"  id="sessionSelect" class="sessionSelected" >
+                <option value="">-Choisissez votre séance-</option>
+                <?php foreach($session as $seance) : ?>
+                    <option value="<?= $seance['session_id'] ?>"> <?= htmlspecialchars($seance['date']) ?> à <?= date('H:i', strtotime($seance['time'])) ?> </option>
+                <?php endforeach; ?>
+            </select>
+            <div id="detailsSelection">
+            </div>
+        </form>
+    </div>
+</section>
+<script src="public/js/panier/addPanier.js"></script>

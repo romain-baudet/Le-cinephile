@@ -1,0 +1,28 @@
+<div class="homeAdmin">
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>N° de seance</th>
+                    <th>N° du film</th>
+                    <th>N° de la salle</th>
+                    <th>Date</th>
+                    <th>Heure</th>
+                    <th>Modifier</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach($sessions as $session) : ?>
+                <tr>
+                    <td><?= htmlspecialchars($session['session_id']) ?></td>
+                    <td><?= htmlspecialchars($session['movie_id']) ?></td>
+                    <td><?= htmlspecialchars($session['room_id']) ?></td>
+                    <td><?= htmlspecialchars($session['date']) ?></td>
+                    <td><?= htmlspecialchars(date('H:i', strtotime($session['time']))) ?></td>
+                    <td><a href="index.php?action=modifSession&idSession=<?= $session['session_id'] ?>">Modifier</a></td>
+                </tr>
+            <?php endforeach; ?> 
+            </tbody>
+        </table>
+    </div>
+</div>

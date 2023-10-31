@@ -1,0 +1,13 @@
+<?php if($this -> isConnectAdmin()) : ?>
+    <section class="homeAdmin">
+        <h2>Bienvenu dans l'espace Administrateur !</h2>
+        <br>
+        <a class="buttonResa" href="index.php?action=listMovies">Afficher les films</a>  
+        <a class="buttonResa" href="index.php?action=addMovie">Ajouter un film</a>  
+        <a class="buttonResa" href="index.php?action=listSessions">Afficher les séances</a>  
+        <a class="buttonResa" href="index.php?action=addSession">Ajouter une séance</a>  
+        <a class="buttonResa" href="index.php?action=listBookings">Afficher les réservations</a>  
+    </section>
+<?php else : ?>
+    <?php header('location:index.php'); ?>
+<?php endif; ?>

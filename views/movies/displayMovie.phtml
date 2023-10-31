@@ -1,0 +1,44 @@
+<article  id="homeMovie">
+    <div class="movie-container" >
+    <h2>Details du film</h2>
+        <div class="movie" >
+                <div class="poster-div">
+                    <img class="poster" src="public/images/<?= htmlspecialchars($movie['poster']) ?>" alt="">
+                </div>
+                <div class="center-movie">
+                    <div class="movie-title">
+                        <p><?= htmlspecialchars($movie['title']); ?></p>
+                    </div>
+                    <div class="style-duration">
+                        <div class="style-duration-card">
+                            <p><?= htmlspecialchars($movie['type']); ?></p>
+                        </div>
+                        <div class="style-duration-card">
+                            <p><?= htmlspecialchars($movie['duration']); ?></p>
+                        </div>
+                        <div class="style-duration-card">
+                            <p><?= htmlspecialchars($movie['date']); ?></p>
+                        </div>
+                    </div>
+                    <div class="realisator-actor">
+                        <p>Realisateur(s) : </p>
+                        <p><?= htmlspecialchars($movie['realisator']); ?></p>
+                    </div>
+                    <div class="realisator-actor">
+                        <p>Acteurs : </p>
+                        <p><?= htmlspecialchars($movie['actors']); ?></p>
+                    </div>
+                    <div class="synopsis">
+                        <p> <span style="text-decoration : underline" > Synopsis : </span> </p>
+                        <p><?= htmlspecialchars($movie['resume']); ?></p>
+                    </div>
+                </div>
+        </div>
+        <div class="teaser">
+            <?= $movie['teaser']; ?>
+        </div>
+        <div class="to_book">
+            <a href="index.php?action=displaySessions&idMovie=<?= htmlspecialchars($movie['id']) ?>" class="buttonResa" > Réserver une séance </a>
+        </div>
+    </div>
+</article>

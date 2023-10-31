@@ -1,0 +1,41 @@
+<section class="homeAdmin">
+    <h2>Liste des films</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Poster</th>
+                    <th>Titre</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Duration</th>
+                    <th>Realisator</th>
+                    <th>Actors</th>
+                    <th>Resume</th>
+                    <th>Teaser</th>
+                    <th>Status</th>
+                    <th>Modifier</th>
+                    <th>Supprimer</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach($movies as $movie) : ?>
+                <tr>
+                    <td><img class="miniature" alt="Affiche du film" src="public/images/<?= htmlspecialchars($movie['poster']) ?>"></td>
+                    <td><?= htmlspecialchars($movie['title']) ?></td>
+                    <td><?= htmlspecialchars($movie['date']) ?></td>
+                    <td><?= htmlspecialchars($movie['type']) ?></td>
+                    <td><?= htmlspecialchars($movie['duration']) ?></td>
+                    <td><?= htmlspecialchars($movie['realisator']) ?></td>
+                    <td><?= htmlspecialchars($movie['actors']) ?></td>
+                    <td><?= htmlspecialchars($movie['resume']) ?></td>
+                    <td><?= htmlspecialchars($movie['teaser']) ?></td>
+                    <td><?= htmlspecialchars($movie['status']) ?></td>
+                    <td><a href="index.php?action=modifMovie&idMovie=<?= $movie['id'] ?>">Modifier</a></td>
+                    <td><a href="index.php?action=suppMovie&idMovie=<?= $movie['id'] ?>">Supprimer</a></td>
+                </tr>
+            <?php endforeach; ?> 
+            </tbody>
+        </table>
+    </div>
+</section>

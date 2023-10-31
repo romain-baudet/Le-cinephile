@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Découvrez notre cinéma Le Cinéphile a Bordeaux !">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/
+bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="public/js/slider/splide.min.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous">
+    </script>
+<title>Le cinéphile</title>
+</head>
+<body>
+<header>
+    <nav>
+        <div id="left-nav">
+            <img id="logo" src="public/images/logo.png" alt="Logo du cinéphile">
+            <h1 id="logo-font">Le cinéphile</h1>
+        </div>  
+        <!--Ce qui reste tout le temps-->
+        <div id="right-nav">
+            <ul>
+                <li class="buttonBox"><a class="nav_btn" href="index.php">Accueil</a></li>
+                <li class="buttonBox"><a class="nav_btn" href="index.php?action=displayPanier">Panier</a></li>
+                <?php if($this->isConnectUser()): ?>
+                
+                <li class="buttonBox"><a class="nav_btn" href="index.php?action=displayAccount"> <?= $this->displayInfosUser() ?></a></li>
+                <li class="buttonBox"><a class="nav_btn" href="index.php?action=deconnexion">Déconnexion</a></li>
+                <?php elseif($this->isConnectAdmin()): ?>
+                
+                <li class="buttonBox"><a class="nav_btn" href="index.php?action=tableauDeBord">Tableau de bord</a></li>
+                <li class="buttonBox"><a href="index.php?action=deconnexionAdmin">Déconnexion <?= $this->displayInfosAdmin() ?></a></li>
+                <?php else: ?>
+                <li class="buttonBox"><a class="nav_btn" href="index.php?action=connexion">Connexion</a></li>
+                <li class="buttonBox"><a class="nav_btn" href="index.php?action=formAddUser">Créer un compte</a></li>
+                    
+                <?php endif; ?> 
+            </ul>
+        </div>
+    </nav>
+    
+</header>
+<main>
+        <?php if(isset($message)): ?>
+            <p class="<?= $class ?>"><?= $message ?> </p>
+        <?php endif; ?>
+        <!-- si c'est une variable via l'URL -->
+        <?php if(isset($_GET['message'])): ?>
+            <p class="<?= $_GET['class'] ?>"><?= $_GET['message'] ?> </p>
+        <?php endif; ?>
+
+        <?php require $template.'.phtml' ?> 
+</main>
+<footer>
+    <div class="social-network">
+        <a href="http://www.facebook.com"> <i class="fa-brands fa-square-facebook fa-2xl"></i> </a>  
+        <a href="http://www.instagram.com"> <i class="fa-brands fa-instagram fa-2xl"></i> </a>  
+        <a href="http://www.twitter.com"> <i class="fa-brands fa-twitter fa-2xl"></i> </a>  
+        <a href="http://www.youtube.com"> <i class="fa-brands fa-youtube fa-2xl"></i> </a>  
+        <a href="http://www.tiktok.com"> <i class="fa-brands fa-tiktok fa-2xl"></i> </a>  
+    </div>
+    <p>Le Cinéphile Services © 2023 - Tous droits réservés ®</p>
+</footer>
+
+
+
+
+</body>
+</html>

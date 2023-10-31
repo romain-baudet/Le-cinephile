@@ -1,0 +1,29 @@
+<section class="homeAdmin">
+    <h1>Mes réservations</h1>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>N° de réservation</th>
+                    <th>Titre</th>
+                    <th>Date</th>
+                    <th>Heure</th>
+                    <th>Quantité</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach($bookings as $booking) : ?>
+                <tr>
+                    <td><?= htmlspecialchars($booking['booking_id']) ?></td>
+                    <td><?= htmlspecialchars($booking['title']) ?></td>
+                    <td><?= htmlspecialchars($booking['date']) ?></td>
+                    <td><?= htmlspecialchars(substr($booking['time'], 0, 5)) ?></td>
+                    <td><?= htmlspecialchars($booking['quantity']) ?></td>
+                </tr>
+            <?php endforeach; ?> 
+            </tbody>
+        </table>
+    </div>    
+</section>
+
+

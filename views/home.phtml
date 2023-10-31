@@ -1,0 +1,81 @@
+
+        <div> 
+            <img id="sm-baneer" src="public/images/spiderman_baneer.jpg">
+        </div> 
+        <div id="blur"></div>
+        <div id="main-container">
+            <section class="section1" >
+                <h2>Les films à l'affiche</h2>
+                <div id="slider1" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <?php foreach($showingMovies as $movie) : ?>
+                                <li class="splide__slide"><a href="index.php?action=displayMovie&idMovie=<?= htmlspecialchars($movie['id']) ?>"><img class="slider-img" src="public/images/<?= htmlspecialchars($movie['poster']) ?>"></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section2">
+                <h2>Les prochaines sorties</h2>
+                <div id="slider2" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                        <?php foreach($futureMovies as $movie) : ?>
+                                <li class="splide__slide"> <a href="index.php?action=displayMovie&idMovie=<?= htmlspecialchars($movie['id']) ?>"><img class="slider-img" src="public/images/<?= htmlspecialchars($movie['poster']) ?>"></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section3">
+                <h2>Notre cinéma</h2>
+                <article class="our-cinema">
+                    <div class="side-left">
+                        <p> Découvrez l'expérience de cinéma ultime à partager avec vos amis ou votre moitié ! </p>
+                        <p> Notre salle de cinéma vous offre une ambiance chaleureuse et confortable pour vous détendre et vous évader du quotidien. Avec notre écran large et notre son surround, vous serez immergé dans un univers cinématographique époustouflant, comme si vous y étiez.</p> 
+                        <p>Profitez de notre sélection de films variée et de qualité pour vous divertir avec vos amis ou partager des moments romantiques avec votre bien-aimé(e). Et pour rendre cette expérience encore plus mémorable, n'hésitez pas à vous offrir des rafraîchissements et des friandises gourmandes à notre bar à snacks.  </p> 
+                    </div>
+                    <div class="side-right">                    
+                        <img class="salles-pic" src="public/images/salle2.png" alt="cinéma entre amis">
+                    </div>
+                </article>
+            </section>
+            
+            <section class="section4">
+                <h2>Une aventure immersive : la 4DX !</h2>
+                <article class="our-cinema">
+                    <div class="side-right">                    
+                        <img class="salles-pic" src="public/images/4dx.jpg" alt="4dx">
+                    </div>
+                    <div class="side-left">
+                        <p> Vous cherchez à vivre une expérience cinématographique immersive et époustouflante ? </p>
+                        <p> Notre salle 4DX est faite pour vous ! Avec des sièges qui bougent, des effets spéciaux de vent, de pluie, de neige et même de fumée, vous vous sentirez plongé au cœur de l'action ! Chaque film devient une véritable aventure grâce à notre technologie de pointe. </p>
+                        <p> Venez découvrir notre sélection de films en 4DX et laissez-vous transporter dans un univers cinématographique totalement nouveau. Réservez dès maintenant pour vivre une expérience inoubliable au cinéma !</p>
+                    </div>
+                </article>
+            </section>
+            <section class="section5">
+                <div class="acces">
+                    <h2>Accès / Contacts</h2>
+                    
+                    <p class="font-acces" > Cinéma "Le Cinéphile" </p>
+                    <a href="mailto:contact@lecinephile.fr"><p class="font-acces" > contact@lecinephile.fr </p></a>
+                    <a href="tel:+5 57 85 92 32 "> <p class="font-acces" >05 57 85 92 32</p> </a>   
+                    <p class="font-acces" >53 Quai de Bacalan </p>
+                    <p>33 000, Bordeaux </p>
+                    
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d707.0404825722617!2d-0.5578503302878693!3d44.85899814882702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55288f651c50cb%3A0x580a7167c38e7364!2s53%20Quai%20de%20Bacalan%2C%2033300%20Bordeaux!5e0!3m2!1sfr!2sfr!4v1689153618576!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+    
+        </div>
+
+        <script src="public/js/slider/slider.js"></script>
+
+    
+
+    

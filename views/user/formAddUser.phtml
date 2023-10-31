@@ -1,0 +1,29 @@
+<section class="global-content">
+    <div class="img-container">
+        <img src="public/images/couple.jpg" alt="Couple heureux">
+    </div>
+    <div class="inscription">
+        <h2 class="formTitle">Inscrivez-vous</h2>
+        <form class="form" method="post" action="#">
+            <fieldset>
+                <legend> Informations d'inscription</legend>
+                <input id="name" type="text" placeholder="Enter your name" name="name">
+                <input id="surname" type="text" placeholder="Enter your surname" name="surname">
+                <input id="birthdate" type="date" name="birthdate">
+                <input id="email" type="email" placeholder="Enter your email" name="email">
+                <input id="password" type="password" placeholder="Enter your password" name="password">
+            </fieldset>
+        <!-- 
+            <input id="confirmPassword" type="text" placeholder="Confirm your password" name="confirmPassword">
+            <div id="confirmPasswordError" class="error-message"></div> -->
+
+            <button type="submit" name="register-submit" class="btn-register"> Inscription </button>
+        </form>  
+        <p id="pass-condition" >*Votre mot de passe doit contenir au moins 8 caractères, dont une lettre minuscule (a-z), une lettre majuscule (A-Z), un chiffre (0-9), un caractère spécial (!@#$%^&*). </p>  
+    </div>
+    <div class="img-container">
+        <img src="public/images/boissonpopcorn.jpg" alt="Femme buvant une boisson">
+    </div>
+</section>
+
+<script type="module" src="public/js/validerForm/script.js"></script>

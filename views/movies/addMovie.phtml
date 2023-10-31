@@ -1,0 +1,54 @@
+<section class="homeAdmin">
+    <h2> Ajouter un film dans le catalogue</h2>
+    <form class="form" method="post" action="index.php?action=addMovie" enctype="multipart/form-data">
+        <fieldset>
+                <legend> Informations d'ajout d'un film</legend>
+                    <div>
+                        <label for="title">Title</label>
+                        <input class="admin_input" id="title" type="text" name="title">
+                    </div>
+                    <div>
+                        <label for="date">Date</label>
+                        <input class="admin_input" id="date" type="date"  name="date">
+                    </div>
+                    <div>
+                        <label for="type">Type</label>
+                        <input class="admin_input" id="type" type="text"  name="type">
+                    </div>
+                    <div>
+                        <label for="duration">Duration</label>
+                        <input class="admin_input" id="duration" type="text"  name="duration">
+                    </div>
+                    <div>
+                        <label for="realisator">Realisator</label>
+                        <input class="admin_input" id="realisator" type="text"  name="realisator">
+                    </div>
+                    <div>
+                        <label for="actors">Actors</label>
+                        <input class="admin_input" id="actors" type="text"  name="actors">
+                    </div>
+                    <div>
+                        <label for="resume">Resume</label>
+                        <input class="admin_input" id="resume" type="text"  name="resume">
+                    </div>
+                    <div>
+                        <label for="teaser">Teaser</label>
+                        <input class="admin_input" id="teaser" type="text"  name="teaser">
+                    </div>
+                    <div>
+                        <label for="status">Status</label>
+                        <select class="selected" name="status" id="status">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="poster">Poster</label>
+                        <input class="admin_input" id="poster" type="file" name="poster">
+                    </div>
+                    <button type="submit" name="ajouter" class="btn-register"> Ajouter </button>
+        </fieldset>
+    </form>  
+</section>
+<script type="module" src="public/js/validerForm/script.js"></script>

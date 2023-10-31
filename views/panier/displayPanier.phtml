@@ -1,0 +1,37 @@
+<section class="homeAdmin">
+  <h2>Votre panier</h2>
+  <div class="table-wrapper">
+    <table id="messageConfirm">
+        <thead>
+          <tr>
+            <th>Poster</th>
+            <th>Titre du film</th>
+            <th>Salle</th>
+            <th>Date</th>
+            <th>Heure</th>
+            <th>Quantité</th>
+            <th>Sous-total</th>
+            <th>Supprimer</th>
+          </tr>
+        </thead>
+        <tbody id="panier">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td id="total" colspan="8">Le prix total de votre commande est de  : 0</td>
+          </tr>
+        </tfoot>
+    </table>
+  </div>
+    <!-- on affiche ce bouton une fois connecté (la session est démarrée) -->
+    <?php if($this -> isConnectUser()) : ?>
+      <a class="buttonResa" id="validerCMD">valider votre commande </a>
+    <?php else: ?>
+   <!-- sinon si on est pas connecté alors on invite l'utilisateur à se connecté -->
+      <a class="buttonResa" href="index.php?action=connexion">Veuillez vous connecter pour valider votre commande</a>
+   <?php endif; ?>
+</section>
+  <script src="public/js/panier/displayPanier.js"></script>
+  
+  
+  

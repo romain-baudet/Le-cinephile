@@ -1,0 +1,57 @@
+
+<div class="homeAdmin">
+    <h2> Modifier un film dans le catalogue</h2>
+    <form class="form" method="post" action="index.php?action=modifMovie" enctype="multipart/form-data">
+        <fieldset>
+            <legend> Informations de modification de film</legend>
+            <div>
+                <input type="hidden" name="idMovie" value="<?= htmlspecialchars($movie['id']) ?>"/>
+            </div>
+            <div>
+                <label for="title">Title</label>
+                <input class="admin_input" id="title" type="text" value="<?= htmlspecialchars($movie['title']) ?>" name="title">
+            </div>
+            <div>
+                <label for="date">Date</label>
+                <input class="admin_input" id="date" type="date" value="<?= htmlspecialchars($movie['date']) ?>" name="date">
+            </div>
+            <div>
+                <label for="type">Type</label>
+                <input class="admin_input" id="type" type="text" value="<?= htmlspecialchars($movie['type']) ?>" name="type">
+            </div>
+            <div>
+                <label for="duration">Duration</label>
+                <input class="admin_input" id="duration" type="text" value="<?= htmlspecialchars($movie['duration']) ?>" name="duration">
+            </div>
+            <div>
+                <label for="realisator">Realisator</label>
+                <input class="admin_input" id="realisator" type="text" value="<?= htmlspecialchars($movie['realisator']) ?>" name="realisator">
+            </div>
+            <div>
+                <label for="actors">Actors</label>
+                <input class="admin_input" id="actors" type="text" value="<?= htmlspecialchars($movie['actors']) ?>" name="actors">
+            </div>
+    		<div>
+    		    <label for="resume">Resume</label>
+            <input class="admin_input" id="resume" type="text" value="<?= htmlspecialchars($movie['resume']) ?>" name="resume">
+    		</div>
+    		<div>
+    		    <label for="teaser">Teaser</label>
+                <input class="admin_input" id="teaser" type="text" value="<?= htmlspecialchars($movie['teaser']) ?>" name="teaser">
+    		</div>
+    		<div>
+    		    <label for="status">Status</label>
+                <input class="admin_input" id="status" type="text" value="<?= htmlspecialchars($movie['status']) ?>" name="status">
+    		</div>
+    		<div>
+    		    <label for="poster"></label>
+                <img src="public/images/<?= htmlspecialchars($movie['poster']) ?>" alt="Affiche du film" id="poster" style="width: 10vw;">
+    		</div>
+    		<div>
+                <label>Upload nouvelle affiche: </label>
+                <input type="file" name="newPoster">
+    		</div>
+            <button type="submit" name="modifier" class="btn-register"> Modifier </button>
+        </fieldset>
+    </form>  
+</div>

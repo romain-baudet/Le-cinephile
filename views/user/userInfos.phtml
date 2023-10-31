@@ -1,0 +1,23 @@
+<section class="homeAdmin">    
+    <h2>Mes informations personnelles</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Date de naissace</th>
+                <th>Email</th>
+                <!--<th>Password</th>-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><?= htmlspecialchars($user['name']) ?></td>
+                <td><?= htmlspecialchars($user['surname'] )?></td>
+                <td><?= htmlspecialchars($user['birthdate']) ?></td>
+                <td><?= htmlspecialchars($user['email']) ?></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+

@@ -1,0 +1,15 @@
+<div class="infos_session">
+    <div class="poster-img"> 
+        <img class="miniature" src="public/images/<?= htmlspecialchars($session['poster']) ?>"> 
+    </div>
+    <div class="infos">
+        <p>Titre : <?= htmlspecialchars($session['title']) ?></p>
+        <p>Date : <?= htmlspecialchars($session['date']) ?></p>
+        <p>Heure : <?= htmlspecialchars(substr($session['time'], 0, 5)) ?></p>
+        <p>Prix : <?= htmlspecialchars($session['price']) ?> €</p>
+        <p>Nom de la salle : <?= htmlspecialchars($session['name']) ?></p>
+        <input class="inputNumber" type='number' min='1' max='30' value="1">
+        <a href="#" id="<?= htmlspecialchars($session['session_id']) ?>" class="buttonResa" > Ajouter au panier </a>
+    </div>
+</div>
+<!--index.php?action=displayPanier-->
